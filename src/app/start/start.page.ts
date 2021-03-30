@@ -14,7 +14,7 @@ export class StartPage implements OnInit {
   ngOnInit() {
     this.subRoutes = [
       new SubPage(`Buildings`, `${AppSubRoutes.buildings}`, ''),
-      new SubPage(`procedures`, `${AppSubRoutes.procedures}`, ''),
+      new SubPage(`Procedures`, `${AppSubRoutes.procedures}`, ''),
     ];
   }
 }
