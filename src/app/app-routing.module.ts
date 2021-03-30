@@ -17,7 +17,7 @@ const routes: Routes = [
     loadChildren: () => import('./procedure/procedure.module').then( m => m.ProcedurePageModule)
   },
   {
-    path: 'start',
+    path: AppSubRoutes.start,
     loadChildren: () => import('./start/start.module').then( m => m.StartPageModule)
   }
 ];

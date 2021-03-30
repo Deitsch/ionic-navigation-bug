@@ -9,11 +9,19 @@
 
 <ion-content>
   <ion-list class="sub-menu">
-  <ng-container *ngFor="let subRoute of subRoutes">
-    <ion-item [routerLink]="[subRoute.getAbsLinkForPage()]" routerLinkActive="highlighted-row">
-      <ion-label>{{ subRoute.title }}</ion-label>
-    </ion-item>
-  </ng-container>
-</ion-list>
+    <ng-container *ngFor="let subRoute of subRoutes">
+      <ion-item [routerLink]="[subRoute.getAbsLinkForPage()]" routerLinkActive="highlighted-row">
+        <ion-label>{{ subRoute.title }}</ion-label>
+      </ion-item>
+    </ng-container>
+  </ion-list>
+
+  <ion-list class="sub-menu">
+    <ng-container *ngFor="let subRoute of subRoutes">
+      <ion-item routerLink="/{{subRoute.base}}" routerLinkActive="highlighted-row">
+        <ion-label>{{ subRoute.title }} static</ion-label>
+      </ion-item>
+    </ng-container>
+  </ion-list>
 
 </ion-content>
