@@ -1,15 +1,24 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AppSubRoutes } from './start/start.page';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'start',
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: AppSubRoutes.buildings,
+    loadChildren: () => import('./building/building.module').then( m => m.BuildingPageModule)
+  },
+  {
+    path: AppSubRoutes.procedures,
+    loadChildren: () => import('./procedure/procedure.module').then( m => m.ProcedurePageModule)
+  },
+  {
+    path: 'start',
+    loadChildren: () => import('./start/start.module').then( m => m.StartPageModule)
   }
 ];
 
